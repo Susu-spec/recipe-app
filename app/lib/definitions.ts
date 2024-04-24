@@ -1,4 +1,6 @@
 export type Recipe = {
     label: string;
-    description: string;
+    image: string;
+    uri: string;
+    images: string[];
 }
