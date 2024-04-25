@@ -11,6 +11,7 @@ export default function InputRecipeData () {
     const [ query, setQuery ] = useState('chicken');
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        event.preventDefault();
         const value  = event.target.value;
         setQuery(value);
     }
@@ -40,7 +41,6 @@ export default function InputRecipeData () {
    return (
     <div className="search__input border-[2px] border-slate-500 flex flex-row items-center gap-5 p-1 rounded-[15px]">
        <label htmlFor="searchId">search</label>
-
        <input type="text"
             id="searchId"
             placeholder="Enter recipe keyword"
