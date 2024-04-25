@@ -6,9 +6,7 @@ import { fetchRecipes } from '../api/recipe';
 
 export default function InputRecipeData () {
     const router = useRouter();
-
-    // const []
-    const [ query, setQuery ] = useState('chicken');
+    const [ query, setQuery ] = useState('');
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
