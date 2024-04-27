@@ -4,7 +4,7 @@ import { useState, ChangeEvent, useEffect } from "react";
 import { fetchRecipes } from '../api/recipe';
 import InputRecipeData from '@/app/ui/input';
 import { Recipe } from "../lib/definitions";
-import RecipeCard from "./recipecard";
+import RecipeCard from "@/app/ui/recipecard";
 
 
 export default function RecipeList () {
@@ -44,7 +44,7 @@ export default function RecipeList () {
 
     return (
         <div className='w-full'>
-            <div className='w-full flex items-center pt-10 pb-5 justify-center'>
+            <div className='w-full flex items-center mt-5 mb-3 justify-center'>
                 <InputRecipeData query={query} onSearch={handleSearch} onChangeQuery={handleChange}/>
             </div>
             <div>
