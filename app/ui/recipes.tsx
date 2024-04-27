@@ -1,10 +1,10 @@
 'use client';
 import { useRouter } from "next/navigation";
-import { useState, ChangeEvent, useEffect } from "react";
+import { useState, ChangeEvent } from "react";
 import { fetchRecipes } from '../api/recipe';
 import InputRecipeData from '@/app/ui/input';
 import { Recipe } from "../lib/definitions";
-import RecipeCard from "@/app/ui/recipecard";
+import RecipeCard from "../ui/recipecard";
 
 
 export default function RecipeList () {
