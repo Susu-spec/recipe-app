@@ -25,7 +25,7 @@ export default function InputRecipeData (RecipeProps: InputRecipeDataProps) {
                 value={RecipeProps.query}
                 onChange={handleChange}
                 onKeyDown={handleKeyPress}
-                className="bg-[transparent] outline-none border-none w-full py-3 pl-2 pr-3"
+                className="bg-[transparent] outline-none border-none max-w-xs py-3 pl-2 pr-3"
             />
         </div>
     </form>

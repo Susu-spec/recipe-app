@@ -4,7 +4,7 @@ import { useState, ChangeEvent } from "react";
 import { fetchRecipes } from '../api/recipe';
 import InputRecipeData from '@/app/ui/input';
 import { Recipe } from "../lib/definitions";
-import RecipeCard from "../ui/recipecard";
+import RecipeCard from '@/app/ui/recipecard';
 
 
 export default function RecipeList () {
@@ -13,7 +13,6 @@ export default function RecipeList () {
     const [ recipes, setRecipes ] = useState([] as Recipe[]);
 
 
-   
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         const value  = event.target.value;
         setQuery(value);
@@ -64,4 +63,4 @@ export default function RecipeList () {
         </div>
     </div>
     );
-}                                                                                                                              
+}   

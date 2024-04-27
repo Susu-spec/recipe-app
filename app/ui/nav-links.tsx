@@ -17,7 +17,8 @@ export default function NavLinks() {
                 'text-blue-600': pathname === link.href
             }
         )}
-        >Home
+        >
+            <h1 className="flex flex-col">Edmama's Recipes</h1>
         </Link>
     );
 }
