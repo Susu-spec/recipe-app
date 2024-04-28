@@ -1,9 +1,8 @@
-import TopNav from "./ui/top-bar"
 import Loading from "./loading";
 import { Suspense } from "react";
 import RecipeList from "./ui/recipes";
 import { styleScript } from "./ui/fonts";
-import Footer from "@/app/ui/footer";
+
 
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
           </Suspense>
         </div>
       </div>
-      <Footer />
+    
       
       
       
