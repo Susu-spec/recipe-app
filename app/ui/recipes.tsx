@@ -4,7 +4,7 @@ import { useState, ChangeEvent } from "react";
 import { fetchRecipes } from '../api/recipe';
 import InputRecipeData from '@/app/ui/input';
 import { Recipe } from "../lib/definitions";
-import RecipeCard from '@/app/ui/recipecard';
+import RecipeCard from '@/app/ui/recipe-card';
 
 
 export default function RecipeList () {
@@ -22,8 +22,7 @@ export default function RecipeList () {
         if (query.trim() !== '') {
             try {
                 const fetchedRecipes = await fetchRecipes(query);
-                setRecipes(recipes => [...recipes, ...fetchedRecipes]);
-
+                setRecipes(fetchedRecipes);
                 
                 console.log('Recipes state after setting:', fetchedRecipes);
                 // console.log(Object.keys(recipes).length)
@@ -46,13 +45,12 @@ export default function RecipeList () {
             <div className='w-full flex items-center mt-5 mb-3 justify-center'>
                 <InputRecipeData query={query} onSearch={handleSearch} onChangeQuery={handleChange}/>
             </div>
-            <div>
             <div className="w-full">
                 {recipes?.length > 0 ? (
-                    <div className="w-full flex flex-wrap gap-10 px-0 lg:px-10 py-10">
-                    {recipes.map((item, index) => (
-                        <RecipeCard recipe={item} key={index} />
-                    ))}
+                    <div className="w-full flex flex-wrap justify-center items-center gap-10 px-0 lg:px-10 py-10">
+                        {recipes.map((item, index) => (
+                            <RecipeCard recipe={item} key={index} />
+                        ))}
                     </div>
                 ) : (
                     <div className="text-white w-full items-center justify-center py-10">
@@ -61,6 +59,5 @@ export default function RecipeList () {
                 )}
                 </div>
         </div>
-    </div>
     );
 }   

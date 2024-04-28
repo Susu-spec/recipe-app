@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-export const module = {
-    images: {
-        domains: ['edamam-product-images.s3.amazonaws.com'],
-    },
+const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: 'edamam-product-images.s3.amazonaws.com',
+      }
+    ]
+  },
 }
+ 
+
+
 export default nextConfig;
