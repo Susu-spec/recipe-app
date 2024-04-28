@@ -18,16 +18,16 @@ export default function RecipeCard ({ recipe } : { recipe: Recipe }) {
                     height={0} 
                 />
                 <div className="p-2">
-                    <p className="text-black font-semibold">{label}</p>
+                    <p className="text-white font-semibold">{label}</p>
                 </div>
                 <div className="mt-2 flex justfy-center items-center">
                     <span className="px-2 py-1 capitalize rounded-full mr-3 text-yellow-500">
-                        <p className="text-black font-semibold">
+                        <p className="text-white font-semibold">
                             {cuisineType}
                         </p>
                     </span>
                     <span className="px-2 py-1 capitalize rounded-full mr-3 text-yellow-500">
-                        <p className="text-black font-semibold break-words">
+                        <p className="text-white font-semibold break-words">
                             {mealType}
                         </p>
                     </span>
