@@ -16,7 +16,7 @@ export default function InputRecipeData (RecipeProps: InputRecipeDataProps) {
 
    return (
    <form onSubmit={(event) => { event.preventDefault();}} className='w-4/5'>
-        <div className="search__input border-[2px] border-slate-500 flex flex-row items-center gap-5 rounded-[10px]">
+        <div className="search__input border-[2px] border-slate-500 flex flex-row items-center gap-5 rounded-[5px] text-white">
             <label htmlFor="searchId"></label>
             <input
                 type="text"

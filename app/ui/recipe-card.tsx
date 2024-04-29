@@ -9,7 +9,7 @@ export default function RecipeCard ({ recipe } : { recipe: Recipe }) {
 
     return (
         <Link href={"/recipes/${id}"} className="w-4/5 md:w-[220px]">
-            <div  className="mx-auto my-0 from-yellow-300 shadow-white text-xs">
+            <div  className="mx-auto my-0 shadow-white text-xs">
                 <Image 
                     src={image!}
                     alt={label!}

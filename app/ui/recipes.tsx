@@ -53,7 +53,7 @@ export default function RecipeList () {
                         ))}
                     </div>
                 ) : (
-                    <div className="text-white w-full items-center justify-center py-10">
+                    <div className="text-black w-full items-center justify-center py-10">
                     <p className="text-center">No Recipe Found</p>
                     </div>
                 )}
