@@ -16,7 +16,7 @@ export default function InputRecipeData (RecipeProps: InputRecipeDataProps) {
 
    return (
    <form onSubmit={(event) => { event.preventDefault();}} className='w-4/5 md:w-2/5'>
-        <div className="search__input border-[2px] border-slate-500 flex flex-row items-center gap-5 rounded-[5px] text-white">
+        <div className="border-[2px] border-slate-500 flex flex-row items-center gap-5 rounded-[5px] text-white bg-transparent">
             <label htmlFor="searchId"></label>
             <input
                 type="text"
@@ -25,7 +25,7 @@ export default function InputRecipeData (RecipeProps: InputRecipeDataProps) {
                 value={RecipeProps.query}
                 onChange={handleChange}
                 onKeyDown={handleKeyPress}
-                className="bg-[transparent] outline-none border-none w-full py-3 pr-3"
+                className="bg-[transparent] focus:bg-[transparent] outline-none border-none w-full py-3 pr-3"
             />
         </div>
     </form>

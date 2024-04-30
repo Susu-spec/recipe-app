@@ -12,7 +12,7 @@ export default function RecipeCard ({ recipe } : { recipe: Recipe }) {
 
     return (
         <Link href={"/recipes/${id}"} className="w-4/5 md:w-[220px]">
-            <div className={`mx-auto my-0 rounded-lg shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] bg-gradient-to-r from-stone-700 to-gray-400 text-xs text-shadow text-black ${lusitana.className}`}>
+            <div className={`mx-auto my-0 rounded-lg shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] bg-gradient-to-r from-stone-700 to-gray-400 text-xs capitalize text-shadow text-black ${lusitana.className}`}>
                 <Image 
                     src={image!}
                     alt={label!}
@@ -21,15 +21,15 @@ export default function RecipeCard ({ recipe } : { recipe: Recipe }) {
                     height={0} 
                 />
                 <div className="mt-1 p-2">
-                    <p className="text-white font-semibold">{label}</p>
+                    <p className="text-white text-sm tracking-widest font-semibold">{label}</p>
                 </div>
-                <div className=" py-2 flex justfy-center items-center">
-                    <span className="px-2 pt-1 capitalize rounded-full mr-3 text-yellow-500">
+                <div className="w-full py-2 flex justfy-between items-center">
+                    <span className="px-2 pt-1 rounded-full mr-3 text-yellow-500">
                         <p className="text-white font-semibold">
                             {cuisineType}
                         </p>
                     </span>
-                    <span className="px-2 pt-1 capitalize rounded-full mr-3 text-yellow-500">
+                    <span className="px-2 pt-1 rounded-full mr-3 text-yellow-500">
                         <p className="text-white font-semibold break-words">
                             {mealType}
                         </p>
