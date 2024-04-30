@@ -2,7 +2,7 @@ import { Recipe } from "../lib/definitions";
 import Link from "next/link";
 import Image from "next/image";
 import { lusitana } from "./fonts";
-import styles from "@/app/globals.css";
+
 
 export default function RecipeCard ({ recipe } : { recipe: Recipe }) {
     const { uri, label, cuisineType, dietLabels, mealType,
