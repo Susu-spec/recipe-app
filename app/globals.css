@@ -20,6 +20,11 @@ body {
   rgb(var(--background-start-rgb));
 }
 
+
+.text-shadow{
+  text-shadow: 0 0 50px hsla(0,0%,0%,.4);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
