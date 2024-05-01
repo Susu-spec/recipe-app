@@ -13,7 +13,6 @@ export async function fetchRecipes(filter: { query: string, limit: number}): Pro
         }
         const data = await response.json();
         const recipes = data.hits.map((hit: any) => hit.recipe); 
-        console.log(recipes);
         return recipes as Recipe[];
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -30,7 +29,7 @@ export async function fetchRecipe(id: string | string[]): Promise<Recipe> {
             throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
         }
         const data = await response.json();
-        const recipe = data[0];
+        const recipe = data.recipe;
         return recipe as Recipe;
     } catch (error) {
         console.error('Error fetching data:', error);

@@ -7,10 +7,16 @@ export const { auth, signIn, signOut } = NextAuth({
     ...authConfig,
     providers: [
       Credentials({
+        // Set up awaitable<User | null as return type
         async authorize(credentials) {
           const parsedCredentials = z
             .object({ email: z.string().email(), password: z.string().min(6) })
             .safeParse(credentials);
+            if (parsedCredentials.success) {
+              const { email, password } = parsedCredentials.data;
+              //auth logic
+            }
+            return null;
         },
       }),
     ],

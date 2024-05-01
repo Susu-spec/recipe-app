@@ -8,10 +8,10 @@ export default function RecipeCard ({ recipe } : { recipe: Recipe }) {
     const { uri, label, cuisineType, dietLabels, mealType,
          image } = recipe;
          const id = uri?.split("#")[1];
-        //  getRecipe(id);
+         
 
     return (
-        <Link href={"/recipes/${id}"} className="w-4/5 md:w-[220px]">
+        <Link href="/pages/[id]" as={`/pages/${id}`} className="w-4/5 md:w-[220px]">
             <div className={`mx-auto my-0 rounded-lg shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] bg-gradient-to-r from-stone-700 to-gray-400 text-xs capitalize text-shadow text-black ${lusitana.className}`}>
                 <Image 
                     src={image!}

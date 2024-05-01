@@ -1,5 +1,5 @@
 import { FormEvent } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
     const router = useRouter();
@@ -23,6 +23,8 @@ export default function LoginPage() {
             router.push('/'); 
         }
     }
+    // Set up log out in main page
+    // Check if authenticated
 
     return (
         <form onSubmit={handleSubmit}>
