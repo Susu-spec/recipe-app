@@ -1,6 +1,6 @@
 import { Recipe } from "@/app/lib/definitions";
 
-export async function fetchRecipes(filter: { query: string, limit: number}): Promise<Recipe[]> {
+export async function fetchRecipes(filter: { query: string | null, limit: number}): Promise<Recipe[]> {
     try {
         const { query = '', limit } = filter;
         const baseUrl = 'https://api.edamam.com/api/recipes/v2/';
