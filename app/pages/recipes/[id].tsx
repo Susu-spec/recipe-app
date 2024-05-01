@@ -1,0 +1,1 @@
+import RecipeDetail from "@/app/ui/recipe-details";
