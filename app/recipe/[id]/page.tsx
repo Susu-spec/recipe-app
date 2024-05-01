@@ -84,7 +84,7 @@ export default function RecipeDetail () {
             <div className='flex flex-col gap-3 mt-20'>
               <p className={`text-green-500 text-bold text-2xl underline antialiased ${lusitana.className}`}>Health Labels</p>
 
-              <div className='flex flex-wrap gap-4 shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px]'>
+              <div className='flex flex-wrap gap-4 p-4 shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px]'>
                 {
                   recipe?.healthLabels.map((item, index) => (
                     <p className={`text-black flex gap-2 bg-[#fff5f518]  px-4 py-1 rounded-full antialiased ${lusitana.className}`} key={index}>{item}</p>
