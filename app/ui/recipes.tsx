@@ -5,10 +5,6 @@ import { fetchRecipes } from '../api/recipe';
 import InputRecipeData from '@/app/ui/input';
 import { Recipe } from "../lib/definitions";
 import RecipeCard from '@/app/ui/recipe-card';
-import { Suspense } from "react";
-import { signOut } from "@/auth"
-import { RecipeCardSkeleton } from "./skeletons";
-
 
 export default function RecipeList () {
     const router = useRouter();
@@ -56,20 +52,10 @@ export default function RecipeList () {
                     <div className="flex flex-col items-center justify-center">
                         <div className="w-full flex flex-wrap justify-center items-center gap-10 px-0 lg:px-10 py-10">
                         {recipes.map((item, index) => (
-                            <Suspense fallback={<RecipeCardSkeleton />}>
-                                <RecipeCard recipe={item} key={index} />
-                            </Suspense>
+                            <RecipeCard recipe={item} key={index} />
                         ))}
-                    </div>
-                        <form action={async () => {
-                            await signOut();
-                        }}
-                    >
-                        <button className="flex grow h-[48px] items-center justify-center gap-2 rounded-md bg-gray-50 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
-                            <div>Sign Out</div>
-                        </button>
-                    </form>
-                    </div>
+                    </div> 
+                </div>
                 ) : (
                     <div className="text-black w-full items-center justify-center py-10">
                     <p className="text-center">No Recipe Found</p>
