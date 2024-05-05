@@ -41,5 +41,3 @@ export default function RecipeCard ({ recipe } : { recipe: Recipe }) {
     )
 }
 
-
-// 

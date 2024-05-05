@@ -1,4 +1,5 @@
 "use client";
+import { auth } from "@/auth"
 import { useState, useEffect } from 'react';
 import { Recipe } from "@/app/lib/definitions";
 import { useParams, useSearchParams } from 'next/navigation';
@@ -7,7 +8,7 @@ import { styleScript, lusitana } from "@/app/ui/fonts";
 import RecipeCard from '@/app/ui/recipe-card';
 import { signOut } from "@/auth";
 
-export default function RecipeDetail () {
+export default async function RecipeDetail () {
   const searchParams = useSearchParams();
     const { id }  = useParams();
     const query = searchParams.get("query");
